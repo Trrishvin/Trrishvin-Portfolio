@@ -959,7 +959,8 @@ export default function App() {
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.onerror = null;
-                      target.src = "IMG-20260906-WA0013.jpg";
+                      target.src =
+                        "C:\Users\trris\Downloads\IMG-20260906-WA0013.jpg";
                     }}
                     alt="Trrishvin Bharati"
                     className="w-full h-96 object-cover rounded-2xl grayscale group-hover:grayscale-0 transition duration-500"
