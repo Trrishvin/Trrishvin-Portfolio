@@ -700,7 +700,10 @@ export default function App() {
     setFormResult("Sending message...");
 
     const formData = new FormData(e.currentTarget);
-    formData.append("access_key", (import.meta.env.VITE_PUBLIC_WEB3FORMS_ACCESS_KEY as string).trim());
+    formData.append(
+      "access_key",
+      (import.meta.env.VITE_PUBLIC_WEB3FORMS_ACCESS_KEY as string).trim(),
+    );
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -956,8 +959,7 @@ export default function App() {
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.onerror = null;
-                      target.src =
-                        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80";
+                      target.src = "IMG-20260906-WA0013.jpg";
                     }}
                     alt="Trrishvin Bharati"
                     className="w-full h-96 object-cover rounded-2xl grayscale group-hover:grayscale-0 transition duration-500"
