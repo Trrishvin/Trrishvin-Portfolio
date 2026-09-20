@@ -13,7 +13,7 @@ export const ContactForm: React.FC = () => {
 
     const formData = new FormData(event.currentTarget);
 
-    const accessKey = import.meta.env.VITE_PUBLIC_WEB3FORMS_ACCESS_KEY as string;
+    const accessKey = (import.meta.env.VITE_PUBLIC_WEB3FORMS_ACCESS_KEY || "1fdab3db-0a73-43cd-b1b5-389292558a01") as string;
     formData.append("access_key", accessKey.trim());
     console.log("Key being sent:", formData.get("access_key"));
 

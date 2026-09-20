@@ -702,7 +702,7 @@ export default function App() {
     const formData = new FormData(e.currentTarget);
     formData.append(
       "access_key",
-      (import.meta.env.VITE_PUBLIC_WEB3FORMS_ACCESS_KEY as string).trim(),
+      ((import.meta.env.VITE_PUBLIC_WEB3FORMS_ACCESS_KEY || "1fdab3db-0a73-43cd-b1b5-389292558a01") as string).trim(),
     );
 
     try {
