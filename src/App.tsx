@@ -955,13 +955,7 @@ export default function App() {
                 <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-[#05668d] to-[#16c172] blur opacity-40 group-hover:opacity-75 transition duration-500" />
                 <div className="relative rounded-3xl overflow-hidden p-3 border bg-[#000009] border-[#05668d]/40">
                   <img
-                    src="/IMG-20260906-WA0013.jpg"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.onerror = null;
-                      target.src =
-                        "C:\Users\trris\Downloads\IMG-20260906-WA0013.jpg";
-                    }}
+                    src="/project-images/Trrishvin.jpg"
                     alt="Trrishvin Bharati"
                     className="w-full h-96 object-cover rounded-2xl grayscale group-hover:grayscale-0 transition duration-500"
                   />
