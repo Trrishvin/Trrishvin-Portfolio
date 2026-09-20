@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #f4f7f2;
+  background: #07110f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --ink: #07110f;
+  --paper: #f4f7f2;
+  --lime: #d7f36b;
+  --mint: #8de0b4;
+  --line: rgba(215, 243, 107, 0.2);
+  --mono: "DM Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 15% 0%,
+      rgba(141, 224, 180, 0.14),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(215, 243, 107, 0.1),
+      transparent 24%
+    ),
+    #07110f;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+section {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+}
+
+section:not(#top)::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+  pointer-events: none;
+}
+
+header {
+  animation: nav-enter 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+header nav {
+  border-color: rgba(215, 243, 107, 0.2) !important;
+  background: rgba(7, 17, 15, 0.72) !important;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+#top > div:last-child {
+  animation: hero-rise 900ms 120ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+#top h1 {
+  letter-spacing: -0.06em;
+}
+
+#top h1 span {
+  background-image: linear-gradient(
+    110deg,
+    var(--lime),
+    var(--mint),
+    #f4f7f2
+  ) !important;
+}
+
+#top .group > div:last-child {
+  box-shadow: 16px 18px 0 rgba(215, 243, 107, 0.12);
+  transform: rotate(2deg);
+  transition:
+    transform 500ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 500ms ease;
+}
+
+#top .group:hover > div:last-child {
+  transform: rotate(0deg) translateY(-6px);
+  box-shadow: 22px 24px 0 rgba(215, 243, 107, 0.16);
+}
+
+#top .group > div:first-child {
+  background: linear-gradient(120deg, var(--lime), var(--mint)) !important;
+}
+
+#about > div > div:last-child > div,
+#skills > div > div:last-child > div,
+#experience > div > div:last-child > div,
+#projects > div > div:last-child > div,
+#contact form {
+  transition:
+    transform 350ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 350ms ease,
+    box-shadow 350ms ease;
+}
+
+#about > div > div:last-child > div:hover,
+#skills > div > div:last-child > div:hover,
+#experience > div > div:last-child > div:hover,
+#projects > div > div:last-child > div:hover,
+#contact form:hover {
+  transform: translateY(-6px);
+  border-color: var(--lime) !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+#projects > div > div:last-child > div {
+  background: rgba(11, 28, 24, 0.82) !important;
+}
+
+#projects > div > div:last-child > div img {
+  filter: saturate(0.75);
+  transition:
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 500ms ease;
+}
+
+#projects > div > div:last-child > div:hover img {
+  filter: saturate(1.1);
+}
+
+#contact input,
+#contact textarea {
+  background: rgba(4, 12, 10, 0.72) !important;
+  border-color: rgba(215, 243, 107, 0.22) !important;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  box-shadow: 0 0 0 4px rgba(215, 243, 107, 0.1);
+}
+
+.font-mono,
+[class*="tracking-widest"] {
+  font-family: var(--mono);
+}
+
+@keyframes nav-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
