@@ -1,75 +1,40 @@
-# React + TypeScript + Vite
+# 🚀 Trrishvin Bharati — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance personal portfolio website engineered with **React**, **Next.js**, **TypeScript**, and **Tailwind CSS**. Designed around a dark `#000009` aesthetic with deep teal and emerald green accents, this site features an interactive **Tech Stack Orbital Blueprint**, dynamic project case studies, and an integrated contact workflow.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **🎨 Custom Dark System:** Styled with a rich dark palette (`#000009` background, `#05668d` deep teal, and `#16c172` emerald green accents).
+- **🪐 Interactive Tech Stack Orbital:** An interactive radial system blueprint displaying core proficiencies (React, Next.js, TypeScript, Tailwind CSS, SQL) linked to real-world "Proof of Work" cards.
+- **📂 Project Case Study Modals:** In-depth modal breakdowns for featured applications (*NexxtKadam*, *Urban Eats*, *Sports Event Registration App*) highlighting tech stack decisions and key accomplishments.
+- **📨 Direct Web3Forms Contact Workflow:** Integrated contact form powered by Web3Forms for direct email inquiries.
+- **📄 Interactive Resume Modal:** Quick-view modal allowing recruiters to inspect background details and experience directly on-page.
+- **📱 Responsive & Accessible:** Fully optimized layout across mobile, tablet, and widescreen desktop displays.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack & Tooling
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework:** Next.js / React (TypeScript)
+- **Styling:** Tailwind CSS
+- **Iconography:** Lucide React
+- **Forms & Integration:** Web3Forms API
+- **Deployment & Hosting:** Vercel / Netlify
+- **Version Control:** Git & GitHub
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started Locally
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
 
-```
+Ensure you have Node.js (v18+) and `npm` installed on your machine.
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Trrishvin/portfolio.git](https://github.com/Trrishvin/portfolio.git)
+   cd portfolio
